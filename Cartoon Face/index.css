@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+:root {
+    --boxShadow: 0 1rem 1rem -0.8rem rgba(0, 0, 0, 0.5);
+}
+
+.face {
+    width: 23rem;
+    height: 22rem;
+    border: 1rem solid #000;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: var(--boxShadow);
+}
+
+.face::before {
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    left: -8.2rem;
+    top: -2.5rem;
+    background-color: #bcbcbc;
+    border: 2.5rem solid #000;
+    position: absolute;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(118deg);
+}
+
+.face::after {
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    right: -8.2rem;
+    top: -2.5rem;
+    background-color: #bcbcbc;
+    border: 2.5rem solid #000;
+    position: absolute;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(-118deg);
+}
+
+.eyes {
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_eye,
+.right_eye {
+    width: 7rem;
+    height: 8rem;
+    position: relative;
+    background-color: #000;
+    border-radius: 6rem;
+}
+
+.left_eye{
+    margin-right: 2.2rem;
+}
+
+.left_eye::before, .right_eye::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 3rem;
+    border: 0.6rem solid #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left_eye::after, .right_eye::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nose{
+    width: 4.2rem;
+    height: 4.5rem;
+    background-color: #000;
+    position: absolute;
+    margin-top: 12rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
